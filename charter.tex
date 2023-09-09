@@ -20,8 +20,8 @@
 \autor{Leandro Martín Soria} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Nombre del Director }
-\pertenenciaDirector{pertenencia} 
+\director{Dr. Ing. Javier Schandy}
+\pertenenciaDirector{FING - UdelaR} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
 \codirector{John Doe} % para que aparezca en la portada se debe descomentar la opción codirector en el documentclass
 \pertenenciaCoDirector{FIUBA}
@@ -69,7 +69,7 @@
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
-%1      & Se completa hasta el punto 4 inclusive                 & dd/mm/aaaa \\ \hline
+1      & Se completa hasta el punto 5 inclusive                 & 03/09/2023 \\ \hline
 %2      & Se completa hasta el punto 7 inclusive
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
@@ -123,7 +123,7 @@ Dicho equipamiento suele comunicarse mediante un estándar denominado \textbf{MI
 	\item Conectores eléctricos: Cómo es la conexión desde un punto de vista eléctrico-mecánico.
 \end{itemize}
 
-Cabe destacar que la comunicación MIDI no es solo entre instrumentos, si no que también puede ser entre instrumentos y una computadora personal. Cada uno de los equipos puede ser tanto transmisor como receptor de mensajes. Sin embargo, debe existir un conector para cada dirección, tal como se muestra en la Figura \ref{fig:01-midi-connector}. El tipo más utilizado es el DIN-5 para entornos donde no hay una PC interviniendo, aunque hoy en día también hay instrumentos capaces de transferir mensajes MIDI vía USB.
+Cabe destacar que la comunicación MIDI no es solo entre instrumentos, sino que también puede ser entre instrumentos y una computadora personal. Cada uno de los equipos puede ser tanto transmisor como receptor de mensajes. Sin embargo, debe existir un conector para cada dirección, tal como se muestra en la Figura \ref{fig:01-midi-connector}. El tipo más utilizado es el DIN-5 para entornos donde no hay una PC interviniendo, aunque hoy en día también hay instrumentos capaces de transferir mensajes MIDI vía USB.
 
 \begin{figure}[htpb]
 	\centering 
@@ -151,7 +151,7 @@ Para lograr este objetivo se plantea un diagrama en bloques como el de la Figura
 
 Puede observarse que del lado de la izquierda se muestran las entradas y a la derecha las salidas, ambas utilizando conectores DIN-5. Un microcontrolador será el encargado de procesar el flujo de mensajes.
 
-Esta interfaz (denominada a partir de ahora Router) deberá ser configurable por el usuario, tanto en las opciones de routeo como de filtrado de mensajes. La configuración se realizará mediante una interfaz a definir (idealmente un display LCD más un encoder rotativo, aunque se pueden contemplar otras posibilidades como por ejemplo un sitio web embebido).
+Esta interfaz (denominada a partir de ahora router) deberá ser configurable por el usuario, tanto en las opciones de routeo como de filtrado de mensajes. La configuración se realizará mediante una interfaz a definir (idealmente un display LCD más un encoder rotativo, aunque se pueden contemplar otras posibilidades como por ejemplo un sitio web embebido).
 
 Pese a que el proyecto es de índole personal, se buscará realizar encuestas sobre la definición de posibles \emph{features} (tanto a nivel hardware como de usabilidad) con la comunidad local (por ejemplo, en foros especializados), de modo de orientar el desarrollo para que eventualmente pueda comercializarse. Este enfoque puede resultar atractivo para potenciales clientes, ya que el desarrollo estaría parcialmente confeccionado en base a requerimientos que el mismo público manifestó.
 
@@ -176,14 +176,14 @@ Orientador    & \supname	      & \pertesupname 	& Director Trabajo Final \\ \hli
 
 \begin{itemize}
 	\item Colaboradores: dado que va a ser gente de foros de internet, tener criterio al considerar las opiniones planteadas.
-	\item Orientador: \supname tiene experiencia en RTOS y gestión de proyectos. Aprovechar estas cualidades.
+	\item Orientador: Javier Schandy tiene experiencia en RTOS y gestión de proyectos. Aprovechar estas cualidades.
 \end{itemize}
 
 
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
-El propósito de este proyecto es desarrollar un Router MIDI capaz de interconectar los instrumentos musicales que le pertenecen al autor. Por otro lado, se desea que esta experiencia sirva como aprendizaje sobre tecnologías vinculadas a la electrónica musical, y al mismo tiempo permita mostrar el prototipo a la comunidad local de músicos, productores y fabricantes, para evaluar un posterior plan de comercialización.
+El propósito de este proyecto es desarrollar un router MIDI capaz de interconectar los instrumentos musicales que le pertenecen al autor. Por otro lado, se desea que esta experiencia sirva como aprendizaje sobre tecnologías vinculadas a la electrónica musical, y al mismo tiempo permita mostrar el prototipo a la comunidad local de músicos, productores y fabricantes, para evaluar un posterior plan de comercialización.
 
 \section{4. Alcance del proyecto}
 \label{sec:alcance}

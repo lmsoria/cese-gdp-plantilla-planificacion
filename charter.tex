@@ -118,34 +118,34 @@ Es frecuente encontrar en estudios de grabación/producción musical (tanto prof
 
 Dicho equipamiento suele comunicarse mediante un estándar denominado \textbf{MIDI} (\emph{Musical Instrument Digital Interface}), el cual describe:
 \begin{itemize}
-	\item Un protocolo de comunicación: Cómo se codifican los mensajes MIDI, y a qué velocidad deben transmitirse (de manera serializada).
-	\item Una interfaz digital: Cómo son los circuitos adaptadores de señales MIDI.
-	\item Conectores eléctricos: Cómo es la conexión desde un punto de vista eléctrico-mecánico.
+	\item Un protocolo de comunicación: cómo se codifican los mensajes MIDI, y a qué velocidad deben transmitirse (de manera serializada).
+	\item Una interfaz digital: cómo son los circuitos adaptadores de señales MIDI.
+	\item Conectores eléctricos: cómo es la conexión desde un punto de vista eléctrico-mecánico.
 \end{itemize}
 
-Cabe destacar que la comunicación MIDI no es solo entre instrumentos, sino que también puede ser entre instrumentos y una computadora personal. Cada uno de los equipos puede ser tanto transmisor como receptor de mensajes. Sin embargo, debe existir un conector para cada dirección, tal como se muestra en la Figura \ref{fig:01-midi-connector}. El tipo más utilizado es el DIN-5 para entornos donde no hay una PC interviniendo, aunque hoy en día también hay instrumentos capaces de transferir mensajes MIDI vía USB.
+Cabe destacar que la comunicación MIDI no es solo entre instrumentos, sino que también puede ser entre instrumentos y una computadora personal. Cada uno de los equipos puede ser tanto transmisor como receptor de mensajes. Sin embargo, debe existir un conector para cada dirección, tal como se muestra en la Figura \ref{fig:01-midi-connector}. En ella se observa un conector DIN-5 para enviar datos, otro para recibirlos y otro para la funcionalidad \emph{thru} (explicada más adelante). Si bien el tipo de conector más utilizado es el DIN-5, hoy en día también hay instrumentos capaces de transferir mensajes MIDI vía USB.
 
 \begin{figure}[htpb]
 	\centering 
 	\includegraphics[width=.4\textwidth]{./Figuras/01-midi-connector.jpg}
-	\caption{Panel de conectores MIDI de un sintetizador. El mismo posee un conector DIN-5 para enviar datos, otro para recibirlos y otro para la funcionalidad \emph{thru}.}
+	\caption{Panel de conectores MIDI de un sintetizador.}
 	\label{fig:01-midi-connector}
 \end{figure}
 
-Algunos equipos poseen un conector adicional denominado \textbf{MIDI THRU}, el cual retransmite los mensajes recibidos. Esto permite crear topologías denominadas \emph{Daisy Chain}, en la cual la salida de un equipo A se conecta a la entrada de un equipo B, y así sucesivamente. Sin embargo, no todos los instrumentos poseen esta característica.
+Tal como se mencionó aneriormente, algunos equipos poseen un conector adicional denominado \textbf{MIDI THRU}, que retransmite los mensajes recibidos. Esto permite crear topologías denominadas \emph{Daisy Chain}, en las que la salida de un equipo A se conecta a la entrada de un equipo B, y así sucesivamente. Sin embargo, no todos los instrumentos poseen esta característica.
 
 En base a lo mencionado, se puede inferir que se dificulta la interconexión a medida que la cantidad de dispositivos aumenta. La solución a este problema implica el uso de interfaces adicionales que toman una entrada MIDI y la replican en varias salidas. Algunos fabricantes ofrecen equipos con funcionalidades adicionales que permiten realizar un \emph{routeo} de señales más complejo y la capacidad de incluso filtrar mensajes.
 
-El problema es que dichos equipos son de fabricación extranjera, y el acceso a los mismos suele ser dificultoso en términos de importación y de costos. Quien redacta este documento se encuentra en esta situación mencionada, y es consciente de otras personas atravesando la misma problemática.
+El problema es que estos equipos son de fabricación extranjera, y el acceso a los mismos suele ser dificultoso en términos de importación y de costos. Quien redacta este documento se encuentra en esta situación mencionada, y es consciente de otras personas atravesando la misma problemática.
 
 Es por ello que se propone hacer una versión de producción local de menor costo que posea funcionalidades de filtrado y \emph{routeo}, capaz de poder cubrir la demanda local en caso de que se quiera convertir este proyecto personal en un desarrollo comercial.
 
-Para lograr este objetivo se plantea un diagrama en bloques como el de la Figura \ref{fig:diagBloques}, el cual describe en forma genérica el sistema a desarrollar.
+Para lograr este objetivo se plantea un diagrama en bloques como el de la Figura \ref{fig:diagBloques}, que describe en forma genérica el sistema a desarrollar.
 
 \begin{figure}[htpb]
 	\centering 
 	\includegraphics[width=\textwidth]{./Figuras/cese-pf-diagrama.png}
-	\caption{Diagrama en bloques del sistema}
+	\caption{Diagrama en bloques del sistema.}
 	\label{fig:diagBloques}
 \end{figure}
 
@@ -175,7 +175,7 @@ Orientador    & \supname	      & \pertesupname 	& Director Trabajo Final \\ \hli
 \end{table}
 
 \begin{itemize}
-	\item Colaboradores: dado que va a ser gente de foros de internet, tener criterio al considerar las opiniones planteadas.
+	\item Colaboradores: dado que va a ser gente de foros de Internet, tener criterio al considerar las opiniones planteadas.
 	\item Orientador: Javier Schandy tiene experiencia en RTOS y gestión de proyectos. Aprovechar estas cualidades.
 \end{itemize}
 
@@ -188,10 +188,10 @@ El propósito de este proyecto es desarrollar un router MIDI capaz de interconec
 \section{4. Alcance del proyecto}
 \label{sec:alcance}
 
-El presente proyecto incluye la presentación del prototipo de un Router MIDI funcional. Por lo tanto, abarca los siguientes puntos:
+El presente proyecto incluye la presentación del prototipo de un \emph{router} MIDI funcional. Por lo tanto, abarca los siguientes puntos:
 
 \begin{itemize}
-	\item El desarrollo de una librería para manejar mensajes MIDI, portable y que pueda utilizarse en futuros proyectos.
+	\item El desarrollo de una biblioteca para manejar mensajes MIDI, portable y que pueda utilizarse en futuros proyectos.
 	\item El desarrollo del firmware que correrá en la plataforma embebida.
 	\item El diseño del hardware utilizando herramientas CAD.
 	\item La fabricación del o de los PCBs (\emph{Printed Circuit Board}, Placa de Circuito Impreso) y el montaje de sus respectivos componentes electrónicos.
@@ -200,7 +200,7 @@ El presente proyecto incluye la presentación del prototipo de un Router MIDI fu
 
 Por otro lado, el presente proyecto no incluye:
 \begin{itemize}
-	\item El desarrollo de librerías de manejo de interfaces gráficas, ya que se buscarán alternativas existentes.
+	\item El desarrollo de bibliotecas de manejo de interfaces gráficas, ya que se buscarán alternativas existentes.
 	\item El diseño de la fuente de alimentación.
 \end{itemize}
 
@@ -212,8 +212,10 @@ Para el desarrollo del presente proyecto se supone que:
 \begin{itemize}
 	\item Se tendrá acceso a distribuidores de componentes electrónicos, con capacidad de compra adecuada para la realización de una cantidad limitada de prototipos (menor a diez unidades).
 	\item El responsable del proyecto dispondrá de tres horas diarias para realizarlo a cabo, aumentando la disponibilidad horaria entre diciembre de 2023 y marzo de 2024.
+	\item El responsable del proyecto posee los conocimientos para llevar a cabo el proyecto. Sin embargo, en el caso de necesitar ayuda, podrá consultar con docentes de la Carrera de Especialización. 
 	\item Se disponen de los instrumentos y herramientas adecuados para realizar el desarrollo electrónico.
-	\item Se dispone de un presupuesto inicial de 2000 dólares, pudiendo aumentarse en caso de emergencias e imprevistos.	
+	\item Se dispone de un presupuesto inicial de 2000 dólares, pudiendo aumentarse en caso de emergencias e imprevistos.
+	\item Se cuenta con el apoyo de voluntarios en la ciudad de Rosario (lugar de residencia del desarrollador) para realizar \emph{tests} de usabilidad.
 \end{itemize}
 
 \section{6. Requerimientos}

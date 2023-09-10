@@ -221,41 +221,117 @@ Para el desarrollo del presente proyecto se supone que:
 \section{6. Requerimientos}
 \label{sec:requerimientos}
 
-\begin{consigna}{red}
-Los requerimientos deben numerarse y de ser posible estar agruparlos por afinidad, por ejemplo:
-
 \begin{enumerate}
-	\item Requerimientos funcionales
+	\item Requerimientos de Entrada-Salida (I/O)
+	\begin{enumerate}
+		\item El equipo deberá contar con conectores DIN-5.
+		\item El equipo deberá tener por lo menos 4 (cuatro) entradas.
+		\item El equipo deberá tener por lo menos 8 (ocho) salidas.
+		\item El equipo deberá tener un puerto USB para poder comunicarse con una PC.
+		\item Dicho puerto USB deberá poder proveer alimentación al equipo si el consumo total lo permite (opcional).
+	\end{enumerate}
+	
+	\item Requerimientos de la comunicación MIDI
+	\begin{enumerate}
+		\item El equipo deberá soportar el envío de mensajes MIDI de acuerdo a lo mencionado en el documento \emph{MIDI 1.0 Detailed Specification, Document Version 4.2.1}.
+		\item Cada entrada deberá enviar los mensajes recibidos a la(s) salida(s) configuradas por el usuario.
+		\item Cada entrada y salida deberá poder detectar los siguientes tipos de mensajes de canal (\emph{Channel Voice Messages}) y filtrarlos de acuerdo a la configuración del usuario:
 		\begin{enumerate}
-			\item El sistema debe...
-			\item Tal componente debe...
-			\item El usuario debe poder...
+			\item \texttt{Note Off}
+			\item \texttt{Note On}
+			\item \texttt{Polyphonic Key Pressure}
+			\item \texttt{Control Change}
+			\item \texttt{Program Change}
+			\item \texttt{Channel Pressure}
+			\item \texttt{Pitch Bend Change}
 		\end{enumerate}
+		\item Cada entrada y salida deberá poder detectar los siguientes tipos de mensajes de sistema (\emph{System Common Messages}) y filtrarlos de acuerdo a la configuración del usuario:
+		\begin{enumerate}
+			\item \texttt{System Exclusive}
+			\item \texttt{MIDI Time Code Quarter Frame}
+			\item \texttt{Song Position Pointer}
+			\item \texttt{Song Select}
+			\item \texttt{Tune Request}
+			\item \texttt{Timing Clock}
+			\item \texttt{Start}
+			\item \texttt{Continue}
+			\item \texttt{Stop}
+			\item \texttt{Active Sensing}
+			\item \texttt{Reset}
+		\end{enumerate}
+		\item En caso de que dos o más entradas quieran enviar mensajes a una misma salida, los mensajes serán enviados por orden de llegada.
+		\item Cada salida deberá poder agregar un retardo al envío de los mensajes recibidos, configurable por el usuario (prioridad menor/opcional);
+	\end{enumerate}
+	
+	\item Requerimientos de la comunicación USB
+	\begin{enumerate}
+		\item El equipo deberá soportar conectividad USB, en modo \emph{device}.
+		\item El equipo deberá ser \emph{class-compliant} (es decir, no requerir de drivers adicionales para poder utilizarse desde la PC).
+		\item En base a lo anterior, el equipo deberá listarse como un periférico USB-MIDI (\emph{USB-MIDI peripheral}).
+		\item Los puertos MIDI de entrada y salida deberán ser accesibles desde la computadora.
+		\item Si la configuración del equipo se realizará sobre un sitio web embebido, se deberá poder brindar conectividad ethernet virtual mediante RNDIS (\emph{Remote Network Driver Interface Specification}).
+	\end{enumerate}
+	
+	\item Requerimientos de la interfaz/usabilidad
+	\begin{enumerate}
+		\item La comunicación Humano-Máquina más elemental se realizará mediante un display LCD (u OLED -a definir-) gráfico y un \emph{encoder} rotativo.
+		\item Durante la secuencia de inicialización el display deberá mostrar la versión de firmware que corre en el equipo (opcional).
+		\item La configuración de \emph{routeo} y filtrado de mensajes se realizará a través de una aplicación gráfica.
+		\item En orden de preferencias, dicha aplicación gráfica será:
+		\begin{enumerate}
+			\item Una página web embebida en el dispositivo.
+			\item Una aplicación de escritorio instalable.
+			\item Una aplicación embebida en el equipo, mostrada a través del display.
+		\end{enumerate}
+	\end{enumerate}
+	
+	\item Requerimientos de almacenamiento
+	\begin{enumerate}
+		\item La configuración de \emph{routeo} y filtrado de mensajes se denominará \emph{preset}.
+		\item El equipo deberá ser capaz de almacenar al menos 16 (dieciseis) \emph{presets} configurables por el usuario.
+		\item La selección de los \emph{presets} deberá ser realizada mediante el \emph{encoder} del panel frontal.
+		\item La pantalla LCD deberá mostrar el \emph{preset} activo.
+	\end{enumerate}	
+	
+	\item Requerimientos de testing
+	\begin{enumerate}
+		\item Se deberá crear una \emph{suite} de tests unitarios para validar la codificación/decodificación de mensajes MIDI.
+		\item Se deberá crear una \emph{suite} de tests de integración para validar el \emph{routeo} de mensajes.
+		\item Se deberá crear una \emph{suite} de tests de integración para validar el filtrado de mensajes.
+		\item Se deberán crear tests que midan la latencia entre la recepción y el envío de mensajes, de modo de poder parametrizarla y minimizarla.
+		\item Se deberán realizar tests de usabilidad, de modo de garantizar una experiencia de usuario (UX) fluida y amigable.
+	\end{enumerate}
 	\item Requerimientos de documentación
+	\begin{enumerate}
+		\item Se deberán documentar tanto el código de la aplicación como el de las librerías desarrolladas utilizando la herramienta \emph{Doxygen}, y alojar la documentación generada en un repositorio.
+		\item Se deberá confeccionar un manual de uso orientado a potenciales usuarios que podrían no contar con conocimiento técnico.
+		\item Se deberá confeccionar un documento explicando los fundamentos de la codificación de mensajes MIDI, de modo que sirva como manual de referencia.
+		\item Este manual de referencia puede ser un anexo del manual de usuario.
+	\end{enumerate}
+
+	\item Requerimientos mecánicos
+	\begin{enumerate}
+		\item Todo el equipamiento deberá caber en un gabinete tipo \emph{rack} de 1RU (\emph{Rack Unit}, 44.5mm) con las siguientes dimensiones:
 		\begin{enumerate}
-			\item Requerimiento 1
-			\item Requerimiento 2 (prioridad menor)
+			\item Alto: 1U, 1.75 pulgadas (44.5mm)
+			\item Ancho: 19 pulgadas (483mm)
+			\item Profundidad: 4.72 pulgadas (120mm)
 		\end{enumerate}
-	\item Requerimiento de testing...
-	\item Requerimientos de la interfaz...
-	\item Requerimientos interoperabilidad...
-	\item etc...
+		\item Los siguientes componentes deberán colocarse en el panel posterior del equipo.
+		\begin{enumerate}
+			\item Conectores DIN de entrada.
+			\item Conector USB.
+			\item Conector de alimentación (si llegara a ser necesario).
+		\end{enumerate}
+		\item Los siguientes componentes deberán colocarse en el panel frontal del equipo.
+		\begin{enumerate}
+			\item Conectores DIN de salida.
+			\item LEDs de indicación visual.
+			\item Pantalla LCD.
+			\item Encoder rotativo.
+		\end{enumerate}
+	\end{enumerate}
 \end{enumerate}
-
-Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
-
-Indicar claramente cuál es la prioridad entre los distintos requerimientos y si hay requerimientos opcionales. 
-
-No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!
-
-Y al escribirlos seguir las siguientes reglas:
-\begin{itemize}
-	\item Ser breve y conciso (nadie lee cosas largas). 
-	\item Ser específico: no dejar lugar a confusiones.
-	\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-\end{itemize}
-
-\end{consigna}
 
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}

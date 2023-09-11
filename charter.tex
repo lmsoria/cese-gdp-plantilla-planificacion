@@ -358,37 +358,105 @@ Una vez finalizado el presente proyecto se entregará:
 \section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-\begin{consigna}{red}
-El WBS debe tener relación directa o indirecta con los requerimientos.  Son todas las actividades que se harán en el proyecto para dar cumplimiento a los requerimientos. Se recomienda mostrar el WBS mediante una lista indexada:
-
 \begin{enumerate}
-\item Grupo de tareas 1
+	\item Análisis preliminar (40 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas h)
+		\item Estudio sobre la especificación MIDI (8 hs)
+		\item Investigación sobre \emph{features} pedidas por potenciales clientes (8 hs)
+		\item Realización del plan del proyecto (24 hs)
 	\end{enumerate}
-\item Grupo de tareas 2
+	\item Desarrollo de la librería de mensajes MIDI (20 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
+		\item Modelado de mensajes (4 hs)
+		\item Codificación de mensajes (8 hs)
+		\item Decodificación de mensajes (8 hs)
 	\end{enumerate}
-\item Grupo de tareas 3
+	
+	\item Desarrollo del hardware auxiliar (56 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
-	\item Tarea 4 (tantas h)
-	\item Tarea 5 (tantas h)
+		\item Selección de componentes (4 hs)
+		\item Diseño del esquemático (4 hs)
+		\item Diseño de los PCBs (4 hs)
+		\item Fabricación y ensamblado de los PCBs (40 hs)
+		\item Validación del hardware (4 hs)
+	\end{enumerate}
+
+	\item Desarrollo del firmware, fase 1: Gestión de mensajes MIDI sobre entradas/salidas DIN (88 hs)
+	\begin{enumerate}
+		\item Desarrollo de la arquitectura de la aplicación (8 hs)
+		\item Recepción y Detección de mensajes MIDI. (8 hs)
+		\item Transmisión de mensajes MIDI (8 hs)
+		\item Extensión de la recepción a más de una entrada (16 hs)
+		\item Extensión de la transmisión a más de una salida (16 hs)
+		\item \emph{Routeo} de entradas/salidas (16 hs)
+		\item Detección de mensajes y filtrado (16 hs)
+	\end{enumerate}
+	
+	\item Desarrollo del firmware, fase 2: Soporte LCD y Encoder (24 hs)
+	\begin{enumerate}
+		\item Agregar soporte para el encoder rotativo (8 hs)
+		\item Agregar librerías para manejo del display (16 h)
+	\end{enumerate}
+	
+	\item Desarrollo del firmware, fase 3: Soporte USB (88 hs)
+	\begin{enumerate}
+		\item Agregar soporte USB \emph{device} (8 hs)
+		\item Agregar soporte para interfaz MIDI. (32 hs)
+		\item Agregar soporte para interfaz RNDIS (32 hs)
+		\item Integración de la interfaz MIDI con el firmware preexistente (16 hs)
+	\end{enumerate}
+	
+	\item Desarrollo de la aplicación (80 hs)
+	\begin{enumerate}
+		\item Bocetado de la interfaz gráfica (8 hs)
+		\item Modelado de la arquitectura de la aplicación (8 hs)
+		\item Comunicación aplicación - firmware (16 hs)
+	\end{enumerate}
+	
+	\item Desarrollo del firmware, fase 4: integración (32 hs)
+	\begin{enumerate}
+		\item Integración entre configuración de la aplicación con el firmware (8 hs)
+		\item Almacenamiento de configuraciones en memoria no volátil (8 hs)
+		\item Agregado de \emph{features} adicionales (16 hs)
+	\end{enumerate}
+	
+	\item Testing (72 hs)
+	\begin{enumerate}
+		\item Test unitarios para codificación/decodificación de mensajes MIDI (8 hs)
+		\item Tests de \emph{routeo} de mensajes (8 hs)
+		\item Tests de filtrado de mensajes (8 hs)
+		\item Tests de integración (8 hs)
+		\item Tests de usabilidad (8 hs)
+		\item Corrección de errores (16 hs)
+	\end{enumerate}
+	
+	\item Desarrollo del hardware (72 hs)
+	\begin{enumerate}
+		\item Selección de componentes (8 hs)
+		\item Diseño del esquemático (8 hs)
+		\item Diseño de los PCBs (8 hs)
+		\item Fabricación y ensamblado de los PCBs (40 hs)
+		\item Validación del hardware (8 hs)
+	\end{enumerate}
+
+	\item Desarrollo del gabinete (58 hs)
+	\begin{enumerate}
+		\item Diseño del gabinete (8 hs)
+		\item Mecanizado del gabinete (40 hs)
+		\item Montaje del equipo (2 hs)
+		\item Validación del montaje (8 hs)
+	\end{enumerate}
+	
+	\item Documentación (80 hs)
+	\begin{enumerate}
+		\item Informe de avance (4 hs)
+		\item Redacción del manual de usuario (24 hs)
+		\item Redacción de las memorias técnicas (24 hs)
+		\item Armado de la presentación final (8 hs)
 	\end{enumerate}
 \end{enumerate}
 
-Cantidad total de horas: (tantas h)
-
-Se recomienda que no haya ninguna tarea que lleve más de 40 h. 
-
-\end{consigna}
+\textbf{Cantidad total de horas: (674 hs)}
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}

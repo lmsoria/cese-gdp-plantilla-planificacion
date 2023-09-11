@@ -92,7 +92,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la implementación del prototipo de una interfaz MIDI con opciones de \emph{routing} y filtrado de mensajes (ambos configurables desde una interfaz de usuario), y tendrá un presupuesto preliminar estimado de \textcolor{red}{600} h de trabajo y US\$2000, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la implementación del prototipo de una interfaz MIDI con opciones de \emph{routing} y filtrado de mensajes (ambos configurables desde una interfaz de usuario), y tendrá un presupuesto preliminar estimado de 674 horas de trabajo y US\$2000, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -336,13 +336,58 @@ Para el desarrollo del presente proyecto se supone que:
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-\begin{consigna}{red}
-Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
+La siguiente lista de historias de usuarios se confeccionó a partir de plantear la propuesta de proyecto en redes sociales, y posteriormente realizar las siguiente preguntas:
+``\emph{¿Qué features les gustaría tener en una interfaz MIDI? ¿Hay alguna recomendación sobre algo en particular?}''
 
-El formato propuesto es: "como [rol] quiero [tal cosa] para [tal otra cosa]."
 
-Se debe indicar explícitamente el criterio para calcular los \textit{story points} de cada historia
-\end{consigna}
+Sobre las preguntas recibidas se aplicó un filtro, dejando las sugerencias más relevantes al proyecto y asignándoles una puntuación de acuerdo al siguiente criterio:
+\begin{table}[H]
+	\centering
+	\resizebox{0.75\textwidth}{!}{%
+		\begin{tabular}{|c|c|c|
+				>{\columncolor[HTML]{C0C0C0}}c |}
+			\hline
+			\textbf{\begin{tabular}[c]{@{}c@{}}¿Cuánto se conoce \\ acerca de la tarea?\end{tabular}} & \textbf{¿Dependencias?} & \textbf{\begin{tabular}[c]{@{}c@{}}¿Cuanto tiempo \\ demandará la tarea?\end{tabular}} & \textit{\textbf{Story Points} }                                     \\ \hline
+			Todo                                                                                     & Nada                   & Menos de dos horas                                                                    & \textbf{1}                                                 \\
+			Casi todo                                                                                & Casi nada              & Medio día                                                                             & \textbf{2}                                                 \\
+			Algo                                                                                     & Pocas                  & Hasta dos días                                                                        & \textbf{3}                                                 \\
+			Casi nada                                                                                & Algunas                & Algunos días                                                                          & \textbf{5}                                                 \\
+			Nada                                                                                     & Muchas                 & Cerca de una semana                                                                   & \cellcolor[HTML]{FFFC9E}{\color[HTML]{F8A102} \textbf{8}}  \\
+			Nada                                                                                     & Desconocido            & Más de una semana                                                                     & \cellcolor[HTML]{FFCCC9}{\color[HTML]{FE0000} \textbf{13}} \\ \hline
+		\end{tabular}%
+	}
+\end{table}
+\begin{enumerate}
+	\item ``\emph{Para mi sería fundamental que toda la programacion del routeo inteligente sea desde el PC}''.
+	\begin{itemize}
+		\item Puntuación: \textbf{5 SP}
+	\end{itemize}
+	\item ``\emph{Yo le pondría un LED en cada in/out para ver actividad MIDI}''.
+		\begin{itemize}
+		\item Puntuación: \textbf{1 SP}
+	\end{itemize}
+	\item ``\emph{Se me ocurre que pueda conservar la configuración mas alla del soft para configurarlo, de modo que uno lo configura y se lo puede llevar a tocar en vivo sin compu y ya quede configurado como lo hiciste en tu casa}''.
+	\begin{itemize}
+		\item Puntuación: \textbf{5 SP}
+	\end{itemize}
+	
+	\item ``\emph{Que traiga un buen manual que explique lo que es el MIDI y como se usa de una forma fácil}''.
+	\begin{itemize}
+		\item Puntuación: \textbf{2 SP}
+	\end{itemize}
+	\item ``\emph{Que sea class compliant, que no necesites instalar drivers}''.
+	\begin{itemize}
+		\item Puntuación: \textbf{8 SP}
+	\end{itemize}
+	\item ``\emph{Insisto con lo necesario de que tenga conectores USB robustos mecánicamente y aislados eléctricamente}''.
+	\begin{itemize}
+		\item Puntuación: \textbf{1 SP}
+	\end{itemize}
+	\item ``\emph{Hace años intento encontrar interfaces USB MIDI que ofrezcan la opción de retardo de MIDI clock por canal digamos que tenga la opción de retrasar o adelantar en milisegundos la señal clock MIDI por cada salida MIDI o por cada canal. Creo que esto es muy útil porque todas las máquinas/synths, por más que estén en slave, responden al clock con una latencia diferente por lo que nunca se logra una sincronización perfecta}''.
+	\begin{itemize}
+		\item Puntuación: \textbf{3 SP}
+	\end{itemize}
+\end{enumerate}
 
 \section{8. Entregables principales del proyecto}
 \label{sec:entregables}

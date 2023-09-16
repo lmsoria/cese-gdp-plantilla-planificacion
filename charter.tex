@@ -429,7 +429,7 @@ Una vez finalizado el presente proyecto se entregará:
 	\item Desarrollo del firmware, fase 1: Gestión de mensajes MIDI sobre entradas/salidas DIN (88 hs)
 	\begin{enumerate}
 		\item Desarrollo de la arquitectura de la aplicación (8 hs)
-		\item Recepción y Detección de mensajes MIDI. (8 hs)
+		\item Recepción y Detección de mensajes MIDI (8 hs)
 		\item Transmisión de mensajes MIDI (8 hs)
 		\item Extensión de la recepción a más de una entrada (16 hs)
 		\item Extensión de la transmisión a más de una salida (16 hs)
@@ -665,48 +665,12 @@ Configurar el software para que en la parte de la tabla muestre los códigos del
 Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
 Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
 
-En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de Gantt realizado con el paquete de \textit{pgfgantt}. En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
-
-\begin{figure}[htbp]
-\begin{center}
-\begin{ganttchart}{1}{12}
-  \gantttitle{2020}{12} \\
-  \gantttitlelist{1,...,12}{1} \\
-  \ganttgroup{Group 1}{1}{7} \\
-  \ganttbar{Task 1}{1}{2} \\
-  \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-  \ganttmilestone{Milestone o hito}{7} \ganttnewline
-  \ganttbar{Final Task}{8}{12}
-  \ganttlink{elem2}{elem3}
-  \ganttlink{elem3}{elem4}
-\end{ganttchart}
-\end{center}
-\caption{Diagrama de Gantt de ejemplo}
-\label{fig:gantt}
-\end{figure}
-
-\newpage
-\begin{figure}[h!]
-	\centering 
-	\includegraphics[width=1.1\textwidth]{./Figuras/gantt-01.png}
-	\caption{Ejemplo de diagrama de Gantt rotado}
-	\label{fig:diagGantt}
-\end{figure}
-
-\newpage
-\begin{figure}[h!]
-	\centering 
-	\includegraphics[width=1.1\textwidth]{./Figuras/gantt-02.png}
-	\caption{Ejemplo de diagrama de Gantt rotado}
-	\label{fig:diagGantt}
-\end{figure}
-
 \newpage
 
 \begin{landscape}
 \begin{figure}[h!]
 \centering 
-\includegraphics[height=0.68\textheight]{./Figuras/gantt.png}
+\includegraphics[height=1.05\textheight]{./Figuras/gantt.png}
 \caption{Ejemplo de diagrama de Gantt rotado}
 \label{fig:diagGantt}
 \end{figure}

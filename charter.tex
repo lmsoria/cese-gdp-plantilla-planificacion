@@ -225,8 +225,8 @@ Para el desarrollo del presente proyecto se supone que:
 	\item Requerimientos de Entrada-Salida (I/O)
 	\begin{enumerate}
 		\item El equipo deberá contar con conectores DIN-5.
-		\item El equipo deberá tener por lo menos 4 (cuatro) entradas.
-		\item El equipo deberá tener por lo menos 8 (ocho) salidas.
+		\item El equipo deberá tener por lo menos 4 (cuatro) conectores de entrada.
+		\item El equipo deberá tener por lo menos 8 (ocho) conectores de salida.
 		\item El equipo deberá tener un puerto USB para poder comunicarse con una PC.
 		\item Dicho puerto USB deberá poder proveer alimentación al equipo si el consumo total lo permite (opcional).
 	\end{enumerate}
@@ -303,7 +303,7 @@ Para el desarrollo del presente proyecto se supone que:
 	\end{enumerate}
 	\item Requerimientos de documentación
 	\begin{enumerate}
-		\item Se deberán documentar tanto el código de la aplicación como el de las librerías desarrolladas utilizando la herramienta \emph{Doxygen}, y alojar la documentación generada en un repositorio.
+		\item Se deberán documentar tanto el código de la aplicación como el de las bibliotecas desarrolladas utilizando la herramienta \emph{Doxygen}, y alojar la documentación generada en un repositorio.
 		\item Se deberá confeccionar un manual de uso orientado a potenciales usuarios que podrían no contar con conocimiento técnico.
 		\item Se deberá confeccionar un documento explicando los fundamentos de la codificación de mensajes MIDI, de modo que sirva como manual de referencia.
 		\item Este manual de referencia puede ser un anexo del manual de usuario.
@@ -311,11 +311,11 @@ Para el desarrollo del presente proyecto se supone que:
 
 	\item Requerimientos mecánicos
 	\begin{enumerate}
-		\item Todo el equipamiento deberá caber en un gabinete tipo \emph{rack} de 1RU (\emph{Rack Unit}, 44.5mm) con las siguientes dimensiones:
+		\item Todo el equipamiento deberá caber en un gabinete tipo \emph{rack} de 1RU (\emph{Rack Unit}, 44,5 mm) con las siguientes dimensiones:
 		\begin{enumerate}
-			\item Alto: 1U, 1.75 pulgadas (44.5mm)
-			\item Ancho: 19 pulgadas (483mm)
-			\item Profundidad: 4.72 pulgadas (120mm)
+			\item Alto: 1U, 1,75 pulgadas (44,5mm)
+			\item Ancho: 19 pulgadas (483 mm)
+			\item Profundidad: 4,72 pulgadas (120 mm)
 		\end{enumerate}
 		\item Los siguientes componentes deberán colocarse en el panel posterior del equipo.
 		\begin{enumerate}
@@ -404,104 +404,104 @@ Una vez finalizado el presente proyecto se entregará:
 \label{sec:wbs}
 
 \begin{enumerate}
-	\item Análisis preliminar (40 hs)
+	\item Análisis preliminar (40 h)
 	\begin{enumerate}
-		\item Estudio sobre la especificación MIDI (8 hs)
-		\item Investigación sobre \emph{features} pedidas por potenciales clientes (8 hs)
-		\item Realización del plan del proyecto (24 hs)
+		\item Estudio sobre la especificación MIDI (8 h)
+		\item Investigación sobre \emph{features} pedidas por potenciales clientes (8 h)
+		\item Realización del plan del proyecto (24 h)
 	\end{enumerate}
-	\item Desarrollo de la librería de mensajes MIDI (20 hs)
+	\item Desarrollo de la biblioteca de mensajes MIDI (20 h)
 	\begin{enumerate}
-		\item Modelado de mensajes (4 hs)
-		\item Codificación de mensajes (8 hs)
-		\item Decodificación de mensajes (8 hs)
+		\item Modelado de mensajes (4 h)
+		\item Codificación de mensajes (8 h)
+		\item Decodificación de mensajes (8 h)
 	\end{enumerate}
 	
-	\item Desarrollo del hardware auxiliar (56 hs)
+	\item Desarrollo del hardware auxiliar (56 h)
 	\begin{enumerate}
-		\item Selección de componentes (4 hs)
-		\item Diseño del esquemático (4 hs)
-		\item Diseño de los PCBs (4 hs)
-		\item Fabricación y ensamblado de los PCBs (40 hs)
-		\item Validación del hardware (4 hs)
+		\item Selección de componentes (4 h)
+		\item Diseño del esquemático (4 h)
+		\item Diseño de los PCBs (4 h)
+		\item Fabricación y ensamblado de los PCBs (40 h)
+		\item Validación del hardware (4 h)
 	\end{enumerate}
 
-	\item Desarrollo del firmware, fase 1: Gestión de mensajes MIDI sobre entradas/salidas DIN (88 hs)
+	\item Desarrollo del firmware, fase 1: gestión de mensajes MIDI sobre entradas/salidas DIN (88 h)
 	\begin{enumerate}
-		\item Desarrollo de la arquitectura de la aplicación (8 hs)
-		\item Recepción y Detección de mensajes MIDI (8 hs)
-		\item Transmisión de mensajes MIDI (8 hs)
-		\item Extensión de la recepción a más de una entrada (16 hs)
-		\item Extensión de la transmisión a más de una salida (16 hs)
-		\item \emph{Routeo} de entradas/salidas (16 hs)
-		\item Detección de mensajes y filtrado (16 hs)
+		\item Desarrollo de la arquitectura de la aplicación (8 h)
+		\item Recepción y detección de mensajes MIDI (8 h)
+		\item Transmisión de mensajes MIDI (8 h)
+		\item Extensión de la recepción a más de una entrada (16 h)
+		\item Extensión de la transmisión a más de una salida (16 h)
+		\item \emph{Routeo} de entradas/salidas (16 h)
+		\item Filtrado de mensajes (16 h)
 	\end{enumerate}
 	
-	\item Desarrollo del firmware, fase 2: Soporte LCD y Encoder (24 hs)
+	\item Desarrollo del firmware, fase 2: soporte del display y encoder (24 h)
 	\begin{enumerate}
-		\item Agregar soporte para el encoder rotativo (8 hs)
-		\item Agregar librerías para manejo del display (16 h)
+		\item Agregar soporte para el encoder rotativo (8 h)
+		\item Agregar bibliotecas para manejo del display (16 h)
 	\end{enumerate}
 	
-	\item Desarrollo del firmware, fase 3: Soporte USB (88 hs)
+	\item Desarrollo del firmware, fase 3: soporte USB (88 h)
 	\begin{enumerate}
-		\item Agregar soporte USB \emph{device} (8 hs)
-		\item Agregar soporte para interfaz MIDI. (32 hs)
-		\item Agregar soporte para interfaz RNDIS (32 hs)
-		\item Integración de la interfaz MIDI con el firmware preexistente (16 hs)
+		\item Agregar soporte USB \emph{device} (8 h)
+		\item Agregar soporte para interfaz MIDI (32 h)
+		\item Agregar soporte para interfaz RNDIS (32 h)
+		\item Integración de la interfaz MIDI con el firmware preexistente (16 h)
 	\end{enumerate}
 	
-	\item Desarrollo de la aplicación (80 hs)
+	\item Desarrollo de la aplicación (80 h)
 	\begin{enumerate}
-		\item Bocetado de la interfaz gráfica (8 hs)
-		\item Modelado de la arquitectura de la aplicación (8 hs)
-		\item Comunicación aplicación - firmware (16 hs)
+		\item Bocetado de la interfaz gráfica (8 h)
+		\item Modelado de la arquitectura de la aplicación (8 h)
+		\item Comunicación aplicación - firmware (16 h)
 	\end{enumerate}
 	
-	\item Desarrollo del firmware, fase 4: integración (32 hs)
+	\item Desarrollo del firmware, fase 4: integración (32 h)
 	\begin{enumerate}
-		\item Integración entre configuración de la aplicación con el firmware (8 hs)
-		\item Almacenamiento de configuraciones en memoria no volátil (8 hs)
-		\item Agregado de \emph{features} adicionales (16 hs)
+		\item Integración entre configuración de la aplicación con el firmware (8 h)
+		\item Almacenamiento de configuraciones en memoria no volátil (8 h)
+		\item Agregado de \emph{features} adicionales (16 h)
 	\end{enumerate}
 	
-	\item Testing (72 hs)
+	\item Testing (72 h)
 	\begin{enumerate}
-		\item Test unitarios para codificación/decodificación de mensajes MIDI (8 hs)
-		\item Tests de \emph{routeo} de mensajes (8 hs)
-		\item Tests de filtrado de mensajes (8 hs)
-		\item Tests de integración (8 hs)
-		\item Tests de usabilidad (8 hs)
-		\item Corrección de errores (16 hs)
+		\item Tests unitarios para codificación/decodificación de mensajes MIDI (8 h)
+		\item Tests de \emph{routeo} de mensajes (8 h)
+		\item Tests de filtrado de mensajes (8 h)
+		\item Tests de integración (8 h)
+		\item Tests de usabilidad (8 h)
+		\item Corrección de errores (16 h)
 	\end{enumerate}
 	
-	\item Desarrollo del hardware (72 hs)
+	\item Desarrollo del hardware (72 h)
 	\begin{enumerate}
-		\item Selección de componentes (8 hs)
-		\item Diseño del esquemático (8 hs)
-		\item Diseño de los PCBs (8 hs)
-		\item Fabricación y ensamblado de los PCBs (40 hs)
-		\item Validación del hardware (8 hs)
+		\item Selección de componentes (8 h)
+		\item Diseño del esquemático (8 h)
+		\item Diseño de los PCBs (8 h)
+		\item Fabricación y ensamblado de los PCBs (40 h)
+		\item Validación del hardware (8 h)
 	\end{enumerate}
 
-	\item Desarrollo del gabinete (58 hs)
+	\item Desarrollo del gabinete (58 h)
 	\begin{enumerate}
-		\item Diseño del gabinete (8 hs)
-		\item Mecanizado del gabinete (40 hs)
-		\item Montaje del equipo (2 hs)
-		\item Validación del montaje (8 hs)
+		\item Diseño del gabinete (8 h)
+		\item Mecanizado del gabinete (40 h)
+		\item Montaje del equipo (2 h)
+		\item Validación del montaje (8 h)
 	\end{enumerate}
 	
-	\item Documentación (80 hs)
+	\item Documentación (80 h)
 	\begin{enumerate}
-		\item Informe de avance (4 hs)
-		\item Redacción del manual de usuario (24 hs)
-		\item Redacción de las memorias técnicas (24 hs)
-		\item Armado de la presentación final (8 hs)
+		\item Informe de avance (4 h)
+		\item Redacción del manual de usuario (24 h)
+		\item Redacción de las memorias técnicas (24 h)
+		\item Armado de la presentación final (8 h)
 	\end{enumerate}
 \end{enumerate}
 
-\textbf{Cantidad total de horas: (674 hs)}
+\textbf{Cantidad total de horas: (674 h)}
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}

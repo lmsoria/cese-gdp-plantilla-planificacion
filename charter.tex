@@ -526,11 +526,126 @@ Indicar claramente en qué unidades están expresados los tiempos.
 De ser necesario indicar los caminos semicríticos y analizar sus tiempos mediante un cuadro.
 Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color, como se muestra en el siguiente ejemplo:
 
-
+\newpage
 
 \section{11. Diagrama de Gantt}
 \label{sec:gantt}
 
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}[c]{|cllcl|}
+	\hline
+	\rowcolor[HTML]{C0C0C0} 
+	{\color[HTML]{000000} \textbf{WBS}} & \multicolumn{1}{c}{\cellcolor[HTML]{C0C0C0}{\color[HTML]{000000} \textbf{Nombre}}} & \multicolumn{1}{c}{\cellcolor[HTML]{C0C0C0}{\color[HTML]{000000} \textbf{Inicio}}} & {\color[HTML]{000000} \textbf{Duración}} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}{\color[HTML]{000000} \textbf{Fin}}} \\ \hline
+	\endhead
+	%
+	\hline
+	\endfoot
+	%
+	\endlastfoot
+	%
+	\rowcolor[HTML]{ECF4FF} 
+	\textbf{1} & \multicolumn{1}{c}{\cellcolor[HTML]{ECF4FF}\textbf{Análisis preliminar}} & \textbf{10/09/23} & \textbf{12 días} & \textbf{16/10/23} \\
+	1.1 & Estudio sobre la especificación MIDI & 10/09/23 & 2 días & 11/09/23 \\
+	\rowcolor[HTML]{EFEFEF} 
+	1.2 & \begin{tabular}[c]{@{}l@{}}Investigación sobre features\\ pedidas por potenciales clientes\end{tabular} & 13/09/23 & 3 días & 15/09/23 \\
+	1.3 & Realización del plan del proyecto & 16/09/23 & 6 días & 16/10/23 \\
+	\rowcolor[HTML]{ECF4FF} 
+	\textbf{2} & \multicolumn{1}{c}{\cellcolor[HTML]{ECF4FF}\textbf{Desarrollo de la biblioteca de mensajes MIDI}} & \textbf{30/10/23} & \textbf{5 días} & \textbf{03/11/23} \\
+	2.1 & Modelado de mensajes & 30/10/23 & 1 día & 30/10/23 \\
+	\rowcolor[HTML]{EFEFEF} 
+	2.2 & Codificación de mensajes & 01/11/23 & 2 días & 03/11/23 \\
+	2.3 & Decodificación de mensajes & 01/11/23 & 2 días & 03/11/23 \\
+	\rowcolor[HTML]{ECF4FF} 
+	\textbf{3} & \multicolumn{1}{c}{\cellcolor[HTML]{ECF4FF}\textbf{Desarrollo del hardware auxiliar}} & \textbf{18/10/23} & \textbf{9 días} & \textbf{29/10/23} \\
+	3.1 & Selección de componentes & 18/10/23 & 1 día & 18/10/23 \\
+	\rowcolor[HTML]{EFEFEF} 
+	3.2 & Diseño de los esquemáticos & 20/10/23 & 1 día & 20/10/23 \\
+	3.3 & Diseño de los PCBs & 21/10/23 & 1 día & 21/10/23 \\
+	\rowcolor[HTML]{EFEFEF} 
+	3.4 & Fabricación y ensamblado de los PCBs & 22/10/23 & 5 días & 28/10/23 \\
+	3.5 & Validación del hardware & 29/10/23 & 1 día & 29/10/23 \\
+	\rowcolor[HTML]{ECF4FF} 
+	\textbf{4} & \multicolumn{1}{c}{\cellcolor[HTML]{ECF4FF}\textbf{Desarrollo del FW (fase 1)}} & \textbf{04/11/23} & \textbf{27 días} & \textbf{03/12/23} \\
+	4.1 & Desarrollo de la arquitectura de la aplicación & 04/11/23 & 2 días & 05/11/23 \\
+	\rowcolor[HTML]{EFEFEF} 
+	4.2 & Recepción y detección de mensajes  MIDI & 06/11/23 & 3 días & 08/11/23 \\
+	4.3 & Transmisión de mensajes MIDI & 10/11/23 & 2 días & 11/11/23 \\
+	\rowcolor[HTML]{EFEFEF} 
+	4.4 & Extensión de la recepción a más de una entrada & 12/11/23 & 6 días & 17/11/23 \\
+	4.5 & Extensión de la transmisión a más de una salida & 18/11/23 & 5 días & 22/11/23 \\
+	\rowcolor[HTML]{EFEFEF} 
+	4.6 & Routeo de entradas/salidas & 24/11/23 & 4 días & 27/11/23 \\
+	4.7 & Filtrado de mensajes & 29/11/23 & 5 días & 03/12/23 \\
+	\rowcolor[HTML]{ECF4FF} 
+	\textbf{5} & \multicolumn{1}{c}{\cellcolor[HTML]{ECF4FF}\textbf{Desarrollo del FW (fase 2)}} & \textbf{04/12/23} & \textbf{7 días} & \textbf{11/12/23} \\
+	5.1 & Agregar soporte para el encoder rotativo & 04/12/23 & 3 días & 06/12/23 \\
+	\rowcolor[HTML]{EFEFEF} 
+	5.2 & Agregar bibliotecas para el manejo del display & 08/12/23 & 4 días & 11/12/23 \\
+	\rowcolor[HTML]{ECF4FF} 
+	\textbf{6} & \multicolumn{1}{c}{\cellcolor[HTML]{ECF4FF}\textbf{Desarrollo del FW (fase 3)}} & \textbf{12/12/23} & \textbf{27 días} & \textbf{07/01/24} \\
+	6.1 & Agregar soporte USB device & 12/12/23 & 2 días & 13/12/23 \\
+	\rowcolor[HTML]{EFEFEF} 
+	6.2 & Agregar soporte para interfaz MIDI & 14/12/23 & 8 días & 21/12/23 \\
+	6.3 & Agregar soporte para interfaz RNDIS & 22/12/23 & 13 días & 03/01/24 \\
+	\rowcolor[HTML]{EFEFEF} 
+	6.4 & \begin{tabular}[c]{@{}l@{}}Integración de la interfaz MIDI\\ con el FW preexistente\end{tabular} & 04/01/24 & 4 días & 07/01/24 \\
+	\rowcolor[HTML]{ECF4FF} 
+	\textbf{7} & \multicolumn{1}{c}{\cellcolor[HTML]{ECF4FF}\textbf{Desarrollo de la aplicacióm}} & \textbf{08/01/24} & \textbf{8 días} & \textbf{15/01/24} \\
+	7.1 & Bocetado de la interfaz gráfica & 08/01/24 & 2 días & 09/01/24 \\
+	\rowcolor[HTML]{EFEFEF} 
+	7.2 & Modelado de la arquitectura de la aplicación & 10/01/24 & 2 días & 11/01/24 \\
+	7.3 & Comunicación aplicación - firmware & 12/01/24 & 4 días & 15/01/24 \\
+	\rowcolor[HTML]{ECF4FF} 
+	\textbf{8} & \multicolumn{1}{c}{\cellcolor[HTML]{ECF4FF}\textbf{Desarrollo del FW (fase 4)}} & \textbf{16/01/24} & \textbf{8 días} & \textbf{23/01/24} \\
+	8.1 & \begin{tabular}[c]{@{}l@{}}Integración entre configuración \\ de la aplicación con el FW\end{tabular} & 16/01/24 & 2 días & 17/01/24 \\
+	\rowcolor[HTML]{EFEFEF} 
+	8.2 & \begin{tabular}[c]{@{}l@{}}Almacenamiento de configuraciones\\ en memoria no volátil\end{tabular} & 18/01/24 & 2 días & 19/01/24 \\
+	8.3 & Agregado de features adicionales & 20/01/24 & 4 días & 23/01/24 \\
+	\rowcolor[HTML]{ECF4FF} 
+	\textbf{9} & \multicolumn{1}{c}{\cellcolor[HTML]{ECF4FF}\textbf{Testing}} & \textbf{24/01/24} & \textbf{14 días} & \textbf{06/02/24} \\
+	9.1 & \begin{tabular}[c]{@{}l@{}}Tests unitarios para codificación\\ y decodificación de mensajes MIDI\end{tabular} & 24/01/24 & 2 días & 25/01/24 \\
+	\rowcolor[HTML]{EFEFEF} 
+	9.2 & Tests de routeo de mensajes & 26/01/24 & 2 días & 27/01/24 \\
+	9.3 & Tests de filtrado de mensajes & 28/01/24 & 2 días & 29/01/24 \\
+	\rowcolor[HTML]{EFEFEF} 
+	9.4 & Tests de integración & 30/01/24 & 2 días & 31/01/24 \\
+	9.5 & Tests de usabilidad & 01/02/24 & 2 días & 02/02/24 \\
+	\rowcolor[HTML]{EFEFEF} 
+	9.6 & Corrección de errores & 03/02/24 & 4 días & 06/02/24 \\
+	\rowcolor[HTML]{ECF4FF} 
+	\textbf{10} & \multicolumn{1}{c}{\cellcolor[HTML]{ECF4FF}\textbf{Desarrollo del hardware}} & \multicolumn{1}{c}{\cellcolor[HTML]{ECF4FF}\textbf{07/02/24}} & \textbf{13 días} & \multicolumn{1}{c|}{\cellcolor[HTML]{ECF4FF}\textbf{19/02/24}} \\
+	10.1 & Selección de componentes & 07/02/24 & 2 días & 08/02/24 \\
+	\rowcolor[HTML]{EFEFEF} 
+	10.2 & Diseño del esquemático & 09/02/24 & 2 días & 10/02/24 \\
+	10.3 & Diseño de los PCBs & 11/02/24 & 2 días & 12/02/24 \\
+	\rowcolor[HTML]{EFEFEF} 
+	10.4 & Fabricación y ensamblado de los PCBs & 13/02/24 & 5 días & 17/02/24 \\
+	10.5 & Validación del hardware & 18/02/24 & 2 días & 19/02/24 \\
+	\rowcolor[HTML]{ECF4FF} 
+	\textbf{11} & \multicolumn{1}{c}{\cellcolor[HTML]{ECF4FF}\textbf{Desarrollo del gabinete}} & \textbf{13/02/24} & \textbf{10 días} & \textbf{22/02/24} \\
+	11.1 & Diseño del gabinete & 13/02/24 & 2 días & 14/02/24 \\
+	\rowcolor[HTML]{EFEFEF} 
+	11.2 & Mecanizado del gabinete & 15/02/24 & 5 días & 19/02/24 \\
+	11.3 & Montaje del equipo & 20/02/24 & 1 día & 20/02/24 \\
+	\rowcolor[HTML]{EFEFEF} 
+	11.4 & Validación del montaje & 21/02/24 & 2 días & 22/02/24 \\
+	\rowcolor[HTML]{ECF4FF} 
+	{\color[HTML]{000000} \textbf{12}} & \multicolumn{1}{c}{\cellcolor[HTML]{ECF4FF}{\color[HTML]{000000} \textbf{Documentación}}} & {\color[HTML]{000000} \textbf{23/02/24}} & {\color[HTML]{000000} \textbf{}} & {\color[HTML]{000000} \textbf{11/03/24}} \\
+	12.1 & Informe de avance &  & 1 día &  \\
+	\rowcolor[HTML]{EFEFEF} 
+	12.2 & Redacción del manual de usuario & 23/02/24 & 8 días & 01/03/24 \\
+	12.3 & Redacción de las memorias técnicas & 02/03/24 &  & 09/03/24 \\
+	\rowcolor[HTML]{EFEFEF} 
+	12.4 & Armado de la presentación final & 10/03/24 & 2 días & 11/03/24 \\ \hline
+	\rowcolor[HTML]{DAE8FC} 
+	\multicolumn{2}{|c}{\cellcolor[HTML]{DAE8FC}\textbf{Tiempo total}} & \textbf{10/09/23} & \multicolumn{1}{l}{\cellcolor[HTML]{DAE8FC}\textbf{183 días}} & \textbf{11/03/24} \\ \hline
+	\caption{Aca va la caption}
+	\label{tab:gantt-table}\\
+\end{longtable}
 \begin{consigna}{red}
 
 Existen muchos programas y recursos \textit{online} para hacer diagramas de Gantt, entre los cuales destacamos:
@@ -570,11 +685,28 @@ En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de Gantt realiza
 \label{fig:gantt}
 \end{figure}
 
+\newpage
+\begin{figure}[h!]
+	\centering 
+	\includegraphics[width=1.1\textwidth]{./Figuras/gantt-01.png}
+	\caption{Ejemplo de diagrama de Gantt rotado}
+	\label{fig:diagGantt}
+\end{figure}
+
+\newpage
+\begin{figure}[h!]
+	\centering 
+	\includegraphics[width=1.1\textwidth]{./Figuras/gantt-02.png}
+	\caption{Ejemplo de diagrama de Gantt rotado}
+	\label{fig:diagGantt}
+\end{figure}
+
+\newpage
 
 \begin{landscape}
-\begin{figure}[htpb]
+\begin{figure}[h!]
 \centering 
-\includegraphics[height=.85\textheight]{./Figuras/Gantt-2.png}
+\includegraphics[height=0.68\textheight]{./Figuras/gantt.png}
 \caption{Ejemplo de diagrama de Gantt rotado}
 \label{fig:diagGantt}
 \end{figure}

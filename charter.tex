@@ -503,39 +503,25 @@ Una vez finalizado el presente proyecto se entregará:
 
 \textbf{Cantidad total de horas: (674 h)}
 
+\newpage
+
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
 
-\begin{consigna}{red}
-Armar el AoN a partir del WBS definido en la etapa anterior. 
-
-%La figura \ref{fig:AoN} fue elaborada con el paquete latex tikz y pueden consultar la siguiente referencia \textit{online}:
-
-%\url{https://www.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ:_A_Tutorial_for_Beginners_(Part_3)\%E2\%80\%94Creating_Flowcharts}
-
-\end{consigna}
+En la Figura \ref{fig:AoN} se muestra el diagrama de \emph{Activity on Node} obtenido del desglose de las tareas de la sección \ref{sec:wbs}, asumiendo la posibilidad de paralelizar las tareas. El camino crítico arrojado es de 384 horas.
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.8\textwidth]{./Figuras/AoN.png}
+\includegraphics[width=0.66\textwidth]{./Figuras/gdp-aon.png}
 \caption{Diagrama de \textit{Activity on Node}.}
 \label{fig:AoN}
 \end{figure}
 
-Indicar claramente en qué unidades están expresados los tiempos.
-De ser necesario indicar los caminos semicríticos y analizar sus tiempos mediante un cuadro.
-Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color, como se muestra en el siguiente ejemplo:
-
-\newpage
 
 \section{11. Diagrama de Gantt}
 \label{sec:gantt}
 
-% Please add the following required packages to your document preamble:
-% \usepackage[table,xcdraw]{xcolor}
-% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
-% \usepackage{longtable}
-% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+En el Cuadro \ref{tab:gantt-table} se muestra el desglose de tareas de la sección \ref{sec:wbs} tabulado luego de armar el correspondiente diagrama de Gantt. Este diagrama puede consultarse en la Figura \ref{fig:diagGantt}. Para realizar el mismo se asumió que, exceptuando las etapas de manufactura, el único recurso humano es el responsable del proyecto. Por otro lado, se tomó como referencia una jornada laboral de cuatro horas. Además, los días de cierre son los martes y jueves (coincidentes con los días de cursada del CESE), hasta la finalización del tercer bimestre en diciembre de 2023 (momento de mayor disponibilidad horaria tal como se mencionó entre los supuestos de la sección \ref{sec:supuestos}).
 \begin{longtable}[c]{|cllcl|}
 	\hline
 	\rowcolor[HTML]{C0C0C0} 
@@ -643,42 +629,18 @@ Es recomendable usar colores y un cuadro indicativo describiendo qué representa
 	12.4 & Armado de la presentación final & 10/03/24 & 2 días & 11/03/24 \\ \hline
 	\rowcolor[HTML]{DAE8FC} 
 	\multicolumn{2}{|c}{\cellcolor[HTML]{DAE8FC}\textbf{Tiempo total}} & \textbf{10/09/23} & \multicolumn{1}{l}{\cellcolor[HTML]{DAE8FC}\textbf{183 días}} & \textbf{11/03/24} \\ \hline
-	\caption{Aca va la caption}
+	\caption{Desglose de tareas.}
 	\label{tab:gantt-table}\\
 \end{longtable}
-\begin{consigna}{red}
-
-Existen muchos programas y recursos \textit{online} para hacer diagramas de Gantt, entre los cuales destacamos:
-
-\begin{itemize}
-\item Planner
-\item GanttProject
-\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
-\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
-\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
-\end{itemize}
-
-Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
-Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
-
-Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
-Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
-Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
-
-\newpage
 
 \begin{landscape}
-\begin{figure}[h!]
-\centering 
-\includegraphics[height=1.05\textheight]{./Figuras/gantt.png}
-\caption{Ejemplo de diagrama de Gantt rotado}
-\label{fig:diagGantt}
-\end{figure}
-
+	\begin{figure}[h!]
+		\centering 
+		\includegraphics[height=1.05\textheight]{./Figuras/gantt.png}
+		\caption{Diagrama de Gantt del proyecto.}
+		\label{fig:diagGantt}
+	\end{figure}
 \end{landscape}
-
-\end{consigna}
-
 
 \section{12. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}

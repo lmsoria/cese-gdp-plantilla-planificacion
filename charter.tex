@@ -721,66 +721,72 @@ Costos de envío y logística &
 \section{13. Gestión de riesgos}
 \label{sec:riesgos}
 
-\begin{consigna}{red}
-a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
- 
-Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos de forma negativa)
-\begin{itemize}
-	\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de (O). 
-\end{itemize}   
+En la presente sección se listarán cinco riesgos que podrían afectar el desarrollo del proyecto. Los mismos serán puntuados de acuerdo al siguiente criterio:
+\begin{enumerate}
+	\item Severidad (S): será un número del 1 al 10, siendo 10 el grado de más impacto.
+	\item Ocurrencia (O): será un número del 1 al 10, siendo 10 la mayor probabilidad de que el riesgo suceda.
+	\item Nivel de prioridad de riesgo (RPN): será el producto de los ítems anteriores, y representa un nivel relativo de importancia que permite comparar riesgos entre sí. 
+\end{enumerate}
 
-Riesgo 2:
+\textbf{Riesgo 1:} dificultad/demoras en la importación de componentes.
 \begin{itemize}
-	\item Severidad (S): 
-	\item Ocurrencia (O):
+	\item Severidad (S): 8, generaría un retardo en los plazos de ejecución del proyecto.
+	\item Ocurrencia (O): 7, dadas las políticas de importación actuales y la poca experiencia del responsable del proyecto importando componentes. 
 \end{itemize}
 
-Riesgo 3:
+\textbf{Riesgo 2:} insuficiencia de poder de cómputo del microcontrolador elegido.
 \begin{itemize}
-	\item Severidad (S): 
-	\item Ocurrencia (O):
+	\item Severidad (S): 9, limitaría muchos de los requerimientos planteados.
+	\item Ocurrencia (O): 3, se dispone de una amplia gama de microcontroladores de distintos segmentos. 
 \end{itemize}
 
+\textbf{Riesgo 3:} subestimación de los plazos estimados para cada una de las tareas.
+\begin{itemize}
+	\item Severidad (S): 8, generaría un retardo en la finalización del proyecto.
+	\item Ocurrencia (O): 3, el plan de trabajo ha sido consultado con personas que poseen más experiencia en gestión de proyectos. 
+\end{itemize}
 
-b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
+\textbf{Riesgo 4:} errores de dimensionamiento del gabinete mecánico
+\begin{itemize}
+	\item Severidad (S): 5, si bien uno de los requerimientos no se cumpliría, se puede ejecutar el resto del proyecto usando un gabinete más grande.
+	\item Ocurrencia (O): 2, un rack de 1U ya dispone de por sí de un volumen considerable. 
+\end{itemize}
+
+\textbf{Riesgo 5:} rotura del prototipo durante la etapa de tests de usabilidad.
+\begin{itemize}
+	\item Severidad (S): 9, la rotura del equipo retrasaría considerablemente el plazo de entrega.
+	\item Ocurrencia (O): 8, al tratarse un equipo que podría usarse en situaciones de música en vivo, y al ser manipulado por personal no técnico el riesgo de daños es considerable. 
+\end{itemize}
+
+En base a los riesgos identificados se confeccionó la siguiente tabla:
 
 \begin{table}[htpb]
-\centering
-\begin{tabularx}{\linewidth}{@{}|X|c|c|c|c|c|c|@{}}
-\hline
-\rowcolor[HTML]{C0C0C0} 
-Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-\end{tabularx}%
+	\centering
+	\begin{tabularx}{\linewidth}{@{}|X|c|c|c|c|c|c|@{}}
+		\hline
+		\rowcolor[HTML]{C0C0C0} 
+		Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
+		\rowcolor[HTML]{FFCCC9} Dificultad/demoras en la importación de componentes & 8 & 7 & {\color[HTML]{FE0000} \textbf{56}} & 5 & 6 & 30 \\ \hline
+		Insuficiencia de poder de cómputo del microcontrolador elegido & 9 & 3 & 27 &    &    &      \\ \hline
+		Subestimación de los plazos estimados para cada una de las tareas & 8 & 4 & 24 &    &    &      \\ \hline
+		Errores de dimensionamiento del gabinete mecánico & 5 & 2 & 10 &    &    &      \\ \hline
+		\rowcolor[HTML]{FFCCC9} Rotura del prototipo durante la etapa de tests de usabilidad & 9 & 8 & {\color[HTML]{FE0000} \textbf{72}} & 3 & 8 & 24 \\ \hline
+	\end{tabularx}%
 \end{table}
 
-Criterio adoptado: 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a...
+En base a los riesgos identificados, se tomarán medidas de mitigación en aquellos cuyo número de RPN sea mayor o igual a 30.
 
-Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
+\textbf{Plan de mitigación del riesgo 1:} El director del proyecto se ofrece a importar componentes a Uruguay ante posibles dificultades. Esto disminuiría los plazos de importación pero requerirá de una logística adicional para poder ingresar los componentes a Argentina. 
+\begin{itemize}
+	\item Severidad (S*): 5, ante la imposibilidad de importar algún componente se sabe que los plazos de importación en Uruguay son fijos. Por otro lado, aumentaría el costo logístico.
+	\item Ocurrencia (O*): 6, 
+\end{itemize}
 
-c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
- 
-Riesgo 1: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-  Nueva asignación de S y O, con su respectiva justificación:
-  - Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-  - Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
-
-Riesgo 2: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
- 
-Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-
-\end{consigna}
-
+\textbf{Plan de mitigación del riesgo 5:} Fabricar al menos cuatro prototipos, a costa de incrementar los gastos del proyecto.
+\begin{itemize}
+	\item Severidad (S*): 3, al haber redundancia de hardware se mitiga el impacto de potenciales roturas.
+	\item Ocurrencia (O*): 8, no hay cambios en la ocurrencia.
+\end{itemize}
 
 \section{14. Gestión de la calidad}
 \label{sec:calidad}

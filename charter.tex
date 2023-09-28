@@ -73,6 +73,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 2      & Se completa hasta el punto 9 inclusive                 & 11 de septiembre de 2023 \\ \hline
 3      & Se completa hasta el punto 12 inclusive                 & 20 de septiembre de 2023 \\ \hline
 4      & Se completa hasta el punto 15 inclusive                 & 27 de septiembre de 2023 \\ \hline
+5      & Aplicadas correcciones finales                         & 28 de septiembre de 2023 \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -751,7 +752,7 @@ En la presente sección se listarán cinco riesgos que podrían afectar el desar
 \textbf{Riesgo 5:} rotura del prototipo durante la etapa de tests de usabilidad.
 \begin{itemize}
 	\item Severidad (S): 9, la rotura del equipo retrasaría considerablemente el plazo de entrega.
-	\item Ocurrencia (O): 8, al tratarse un equipo que podría usarse en situaciones de música en vivo, y al ser manipulado por personal no técnico el riesgo de daños es considerable. 
+	\item Ocurrencia (O): 8, al tratarse un equipo que podría usarse en situaciones de música en vivo y ser manipulado por personal no técnico, el riesgo de daños es considerable. 
 \end{itemize}
 
 En base a los riesgos identificados se confeccionó la siguiente tabla:
@@ -770,15 +771,15 @@ En base a los riesgos identificados se confeccionó la siguiente tabla:
 	\end{tabularx}%
 \end{table}
 
-Junto al director del proyecto se acordó que se tomarán medidas de mitigación en aquellos riesgos cuyo número de RPN sea mayor o igual a 30.
+Junto al director del proyecto se acordó que se tomarán medidas de mitigación en aquellos riesgos cuyo número de RPN sea mayor o igual a 31.
 
-\textbf{Plan de mitigación del riesgo 1:} El director del proyecto se ofrece a importar componentes a Uruguay ante posibles dificultades. Esto disminuiría los plazos de importación pero requerirá de una logística adicional para poder ingresar los componentes a Argentina. 
+\textbf{Plan de mitigación del riesgo 1:} el director del proyecto se ofrece a importar componentes a Uruguay ante posibles dificultades. Esto disminuiría los plazos de importación pero requerirá de una logística adicional para poder ingresar los componentes a Argentina. 
 \begin{itemize}
 	\item Severidad (S*): 5, ante la imposibilidad de importar algún componente se sabe que los plazos de importación en Uruguay son fijos. Por otro lado, aumentaría el costo logístico.
-	\item Ocurrencia (O*): 6, 
+	\item Ocurrencia (O*): 6, en Uruguay las probabilidades de restricciones aduaneras son menores.
 \end{itemize}
 
-\textbf{Plan de mitigación del riesgo 5:} Fabricar al menos cuatro prototipos, a costa de incrementar los gastos del proyecto.
+\textbf{Plan de mitigación del riesgo 5:} fabricar al menos cuatro prototipos, a costa de incrementar los gastos del proyecto.
 \begin{itemize}
 	\item Severidad (S*): 3, al haber redundancia de hardware se mitiga el impacto de potenciales roturas.
 	\item Ocurrencia (O*): 8, no hay cambios en la ocurrencia.
@@ -790,63 +791,63 @@ Junto al director del proyecto se acordó que se tomarán medidas de mitigación
 A continuación se detallan los procedimientos de verificación y validación para los requerimientos más importantes del proyecto:
 
 \begin{itemize} 	
-	\item \textbf{Requerimiento 1.2:} \emph{El equipo deberá tener por lo menos 4 (cuatro) conectores de entrada.}
+	\item \textbf{Requerimiento 1.2:} el equipo deberá tener por lo menos 4 (cuatro) conectores de entrada.
 	\begin{itemize}
 		\item Verificación: se elegirá esta cantidad de entradas durante la fase de diseño del firmware.
 		\item Validación: se mostrará el funcionamiento del equipo con todas las entradas conectadas.
 	\end{itemize}
 	
-	\item \textbf{Requerimiento 1.3:} \emph{El equipo deberá tener por lo menos 8 (ocho) conectores de salida.}
+	\item \textbf{Requerimiento 1.3:} el equipo deberá tener por lo menos 8 (ocho) conectores de salida.
 	\begin{itemize}
 		\item Verificación: se elegirá esta cantidad de salidas durante la fase de diseño del firmware.
 		\item Validación: se mostrará el funcionamiento del equipo con todas las salidas conectadas.
 	\end{itemize}
 	
-	\item \textbf{Requerimiento 3.2:} \emph{El equipo deberá ser \emph{class-compliant} (es decir, no requerir de drivers adicionales para
-	poder utilizarse desde la PC).}
+	\item \textbf{Requerimiento 3.2:} el equipo deberá ser \emph{class-compliant} (es decir, no requerir de drivers adicionales para
+	poder utilizarse desde la PC).
 	\begin{itemize}
 		\item Verificación: se desarrollará el firmware de modo que se alcance este requerimiento.
 		\item Validación: se mostrará la característica \emph{plug and play} del equipo o al conectarlo por el puerto USB.
 	\end{itemize}
 	
-	\item \textbf{Requerimiento 3.4:} \emph{Los puertos MIDI de entrada y salida deberán ser accesibles desde la computadora.}
+	\item \textbf{Requerimiento 3.4:} los puertos MIDI de entrada y salida deberán ser accesibles desde la computadora.
 	\begin{itemize}
 		\item Verificación: se desarrollará esta característica durante la fase de diseño del firmware.
 		\item Validación: se mostrará el funcionamiento del equipo con esta característica.
 	\end{itemize}
 
-	\item \textbf{Requerimiento 4.1:} \emph{La comunicación Humano-Máquina más elemental se realizará mediante un display
-	LCD (u OLED -a definir-) gráfico y un encoder rotativo.}
+	\item \textbf{Requerimiento 4.1:} la comunicación Humano-Máquina más elemental se realizará mediante un display
+	LCD (u OLED -a definir-) gráfico y un encoder rotativo.
 	\begin{itemize}
 		\item Verificación: se analizarán distintas alternativas de pantallas y encoders de modo de elegir las opciones más adecuadas.
 		\item Validación: el equipo deberá funcionar con las opciones seleccionadas.
 	\end{itemize}
 	
-	\item \textbf{Requerimiento 4.3:} \emph{La configuración de \emph{routeo} y filtrado de mensajes se realizará a través de una aplicación gráfica.}
+	\item \textbf{Requerimiento 4.3:} la configuración de \emph{routeo} y filtrado de mensajes se realizará a través de una aplicación gráfica.
 	\begin{itemize}
 		\item Verificación: se desarrollará una aplicación con la funcionalidad requerida.
 		\item Validación: se mostrará el funcionamiento del equipo con esta característica.  
 	\end{itemize}
 	
-	\item \textbf{Requerimiento 5.2:} \emph{El equipo deberá ser capaz de almacenar al menos 16 (dieciseis) presets configurables por el usuario.}
+	\item \textbf{Requerimiento 5.2:} el equipo deberá ser capaz de almacenar al menos 16 (dieciseis) presets configurables por el usuario.
 	\begin{itemize}
 		\item Verificación: se desarrollará esta característica durante la fase de diseño del firmware, y será probada durante la etapa de testing.
 		\item Validación: se mostrará el funcionamiento del equipo con esta característica.
 	\end{itemize}
 
-	\item \textbf{Requerimiento 5.4:} \emph{La pantalla LCD deberá mostrar el preset activo.}
+	\item \textbf{Requerimiento 5.4:} la pantalla LCD deberá mostrar el preset activo.
 	\begin{itemize}
 		\item Verificación: se desarrollará esta característica durante la fase de diseño del firmware.
 		\item Validación: se mostrará el funcionamiento del equipo con esta característica.
 	\end{itemize}
 
-	\item \textbf{ Requerimiento 7.2:} \emph{Se deberá confeccionar un manual de uso orientado a potenciales usuarios que podrían no contar con conocimiento técnico.}
+	\item \textbf{ Requerimiento 7.2:} se deberá confeccionar un manual de uso orientado a potenciales usuarios que podrían no contar con conocimiento técnico.
 	\begin{itemize}
 		\item Verificación: se incluirá la redacción del mismo en la planificación del proyecto.
 		\item Validación: será parte de los entregables del proyecto.
 	\end{itemize}
 	
-	\item \textbf{Requerimiento 8.1:} \emph{Se deberá confeccionar un manual de uso orientado a potenciales usuarios que podrían no contar con conocimiento técnico.}
+	\item \textbf{Requerimiento 8.1:} todo el equipamiento deberá caber en un gabinete tipo \emph{rack} de 1RU (\emph{Rack Unit}, 44,5 mm) de dimensiones 44,5 x 483 x 120 mm.
 	\begin{itemize}
 		\item Verificación: se comprobarán los planos mecánicos del sistema.
 		\item Validación: se verá la presentación del equipo.

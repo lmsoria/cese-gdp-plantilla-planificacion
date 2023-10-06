@@ -125,7 +125,7 @@ Cabe destacar que la comunicación MIDI no es solo entre instrumentos, sino que 
 	\label{fig:01-midi-connector}
 \end{figure}
 
-Tal como se mencionó aneriormente, algunos equipos poseen un conector adicional denominado \textbf{MIDI THRU}, que retransmite los mensajes recibidos. Esto permite crear topologías denominadas \emph{Daisy Chain}, en las que la salida de un equipo A se conecta a la entrada de un equipo B, y así sucesivamente. Sin embargo, no todos los instrumentos poseen esta característica.
+Tal como se mencionó anteriormente, algunos equipos poseen un conector adicional denominado \textbf{MIDI THRU}, que retransmite los mensajes recibidos. Esto permite crear topologías denominadas \emph{Daisy Chain}, en las que la salida de un equipo A se conecta a la entrada de un equipo B, y así sucesivamente. Sin embargo, no todos los instrumentos poseen esta característica.
 
 En base a lo mencionado, se puede inferir que se dificulta la interconexión a medida que la cantidad de dispositivos aumenta. La solución a este problema implica el uso de interfaces adicionales que toman una entrada MIDI y la replican en varias salidas. Algunos fabricantes ofrecen equipos con funcionalidades adicionales que permiten realizar un \emph{routeo} de señales más complejo y la capacidad de incluso filtrar mensajes.
 
@@ -768,7 +768,7 @@ En base a los riesgos identificados se confeccionó la siguiente tabla:
 		Subestimación de los plazos estimados para cada una de las tareas & 8 & 4 & 24 &    &    &      \\ \hline
 		Errores de dimensionamiento del gabinete mecánico & 5 & 2 & 10 &    &    &      \\ \hline
 		Rotura del prototipo durante la etapa de tests de usabilidad & 9 & 8 & \cellcolor[HTML]{FFCCC9}{\color[HTML]{FE0000} \textbf{72}} & 3 & 8 & \cellcolor[HTML]{C1E0C9}{\color[HTML]{3F7E31} \textbf{24}} \\ \hline
-	\end{tabularx}%
+	\end{tabularx}
 \end{table}
 
 Junto al director del proyecto se acordó que se tomarán medidas de mitigación en aquellos riesgos cuyo número de RPN sea mayor o igual a 31.
